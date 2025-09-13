@@ -1,0 +1,10 @@
+[Unit]
+Description=WebUI for Label Printer
+
+[Service]
+ExecStart=/home/pi/printui/.venv/bin/printui -c /home/pi/printui/printui.conf
+User=pi
+AmbientCapabilities = CAP_NET_BIND_SERVICE
+
+[Install]
+WantedBy=multi-user.target
